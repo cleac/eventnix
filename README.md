@@ -9,7 +9,7 @@ It is an event registration system written in `python` with the usage of [`aioht
 ## Bootstrap
 
 First you have to prepare the environment
-```[bash]
+```bash
 $ git clone git@github.com:anxolerd/eventnix.git
 $ cd eventnix
 $ virtualenv -p python3.4 --prompt='[eventnix]' .venv
@@ -18,7 +18,7 @@ $ source .venv/bin/activate
 ```
 
 Now you can run the project:
-```[bash]
+```bash
 $ ./manage.sh run
 ```
 
