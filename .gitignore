@@ -77,3 +77,5 @@ target/
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
+# virtualenv
+.venv/
