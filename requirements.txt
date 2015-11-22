@@ -1,8 +1,10 @@
 # dev dependencies
-flake8
+flake8==2.5.0
 
 # project dependencies
 aiohttp==0.18.3
+aiopg==0.7.0
+SQLAlchemy==1.0.9
 
 # deployment dependencies
 gunicorn==19.3.0

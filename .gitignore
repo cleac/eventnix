@@ -77,5 +77,10 @@ target/
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
+# config files
+/config/development.yml
+/config/production.yml
+/config/test.yml
+
 # virtualenv
 .venv/
