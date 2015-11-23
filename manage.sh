@@ -20,6 +20,12 @@ cd ${SCRIPT_DIRECTORY}
 
 case ${COMMAND} in
     'run')
+        CONFIG_FILE=$2
+        if [[ ! -n ${CONFIG_FILE} ]]; then
+            die "No config file specified"
+        else
+            CONFIG_FILE=`realpath ${CONFIG_FILE}`
+        fi
         IS_VENV=${VIRTUAL_ENV}
         if [[ ! -n ${IS_VENV} ]]; then
             source .venv/bin/activate
@@ -27,8 +33,8 @@ case ${COMMAND} in
             echo -e "already in virtualenv: $IS_VENV"
         fi
         cd src
-        # Listening to localhost. Use nginx proxying in case of production
-        gunicorn eventnix:app --bind localhost:8080 --worker-class aiohttp.worker.GunicornWebWorker
+        # Edit gunicorn config file
+        gunicorn 'eventnix:build_app(config_file="'${CONFIG_FILE}'")' -c ${SCRIPT_DIRECTORY}/config/gunicorn.py
         cd ../
         if [[ ! -n ${IS_VENV} ]]; then
             deactivate

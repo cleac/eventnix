@@ -1,0 +1,9 @@
+"""
+Gunicorn config file
+"""
+
+bind = '127.0.0.1:8080'
+worker_class = 'aiohttp.worker.GunicornWebWorker'
+reload = True
+preload = True
+log_level = 'debug'

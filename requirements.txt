@@ -1,10 +1,12 @@
 # dev dependencies
 flake8==2.5.0
 
+# deployment dependencies
+gunicorn==19.3.0
+
 # project dependencies
 aiohttp==0.18.3
 aiopg==0.7.0
 SQLAlchemy==1.0.9
-
-# deployment dependencies
-gunicorn==19.3.0
+PyYAML==3.11
+aiohttp-jinja2==0.6.2

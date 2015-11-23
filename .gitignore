@@ -78,9 +78,8 @@ target/
 .idea_modules/
 
 # config files
-/config/development.yml
-/config/production.yml
-/config/test.yml
+/config/*
+!/config/*.example
 
 # virtualenv
-.venv/
+/.venv/

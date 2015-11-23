@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+Hello {{ name }}
+
+<ul>
+    {% for event in events %}
+    event
+    {% endfor %}
+</ul>
+{% endblock %}
